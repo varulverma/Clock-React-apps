@@ -1,0 +1,12 @@
+.startCountdown,
+.stopCountdown,
+.pauseCountdown,
+.resumeCountdown,
+.dismissCountdown
+{
+    font-family:sans-serif;
+    font-size: 30px;
+    margin: auto;
+    color: white;
+    justify-content: space-around;
+}

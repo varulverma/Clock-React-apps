@@ -1,0 +1,48 @@
+.heading{
+  font-family:sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+}
+
+.watch{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
+
+.startTimer{
+  font-family:sans-serif;
+  font-size: 50px;
+  margin: auto;
+  color: white;
+}
+.stopTimer,
+.pauseTimer,
+.resumeTimer
+{
+  font-family:sans-serif;
+  font-size: 30px;
+  margin: auto;
+  color: white;
+}
+.timer{
+  font-size: 40px;
+  font-family:sans-serif;
+  font-weight: bold;
+  margin: auto;
+  color: white;
+}
