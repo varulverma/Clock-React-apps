@@ -1,0 +1,19 @@
+.currentTime{
+    font-size: 50px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+.timeInput{
+    margin-top: 20px;
+    height: inherit;
+    width: inherit;
+    border: 0ch;
+    background-color: rgb(149, 149, 149);
+    color: white
+}
+.alarmMessage{
+    font-size: 30px;
+    color: white; 
+    font-weight: lighter;
+}
