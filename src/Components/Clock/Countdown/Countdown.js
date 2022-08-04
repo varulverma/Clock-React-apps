@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import CircularDial from "../../SharedComponents/CircularDial/CircularDial";
 import InputScroll from "../../SharedComponents/Input/InputScroll/InputScroll";
 import Span from "../Stopwatch/Span";
@@ -8,7 +8,7 @@ import './Countdown.css';
 
 function Countdown() {
   const [counterState, setcounterState]= useState(0)
-
+  useEffect(()=>{console.log("countdown.js rerendered")})
 
     return (
       <>
@@ -46,7 +46,7 @@ function Countdown() {
             text="Start"
             className="startCountdown"
             handleClick={()=>{
-              startTimer()
+              // startTimer()
               setcounterState(1);
             }}
           />
@@ -58,7 +58,7 @@ function Countdown() {
            text="Stop"
            className="stopCountdown"
            handleClick={()=>{
-              stopTimer()
+              // stopTimer()
              setcounterState(0);
            }}
           />  
@@ -66,7 +66,7 @@ function Countdown() {
             text="Pause"
             className="pauseCountdown"
             handleClick={()=>{
-              pauseTimer()
+              // pauseTimer()
               setcounterState(2);
             }}
           />
@@ -78,7 +78,7 @@ function Countdown() {
            text="Stop"
            className="stopCountdown"
            handleClick={()=>{
-            stopTimer()
+            // stopTimer()
              setcounterState(0);
            }}
           />  
@@ -86,7 +86,7 @@ function Countdown() {
             text="Resume"
             className="resumeCountdown"
             handleClick={()=>{
-              resumeTimer()
+              // resumeTimer()
               setcounterState(2);
             }}
           />

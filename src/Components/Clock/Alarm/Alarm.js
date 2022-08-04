@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import CircularDial from "../../SharedComponents/CircularDial/CircularDial";
 import "./Alarm.css";
 
@@ -10,17 +10,21 @@ class Alarm extends React.Component {
       alarmTime: "",
     };
     this.setAlarmTime = this.setAlarmTime.bind(this);
-    
+
   }
 
   componentDidMount() {
     this.clock = setInterval(() => this.setCurrentTime(), 1000);
-    this.interval = setInterval(() => this.checkAlarmClock(), 1000);
+    // this.interval = setInterval(() => this.checkAlarmClock(), 1000);
   }
 
   componentWillUnmount() {
     clearInterval(this.clock);
     clearInterval(this.interval);
+  }
+
+  componentDidUpdate() {
+    this.checkAlarmClock();
   }
 
   setCurrentTime() {
@@ -44,8 +48,7 @@ class Alarm extends React.Component {
       this.alarmMessage = "Your alarm is set for " + this.state.alarmTime + ".";
       if (this.state.currentTime === this.state.alarmTime) {
         alert("its time!");
-      } else {
-        console.log("not yet");
+        // add the audio file
       }
     }
   }
@@ -54,7 +57,7 @@ class Alarm extends React.Component {
     return (
       <CircularDial>
         <div>
-          <div className="alarmMessage">It is</div>
+          <div className="alarmMessage">It is </div>
           <div className="currentTime">{this.state.currentTime}</div>
           <div className="alarmMessage">{this.alarmMessage}</div>
           <form >
