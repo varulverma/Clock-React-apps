@@ -1,6 +1,7 @@
 import React from "react";
 import CircularDial from "../../SharedComponents/CircularDial/CircularDial";
 import "./Alarm.css";
+import audioUrl from "./Audio/alarm.wav"
 
 class Alarm extends React.Component {
   constructor() {
@@ -47,8 +48,10 @@ class Alarm extends React.Component {
     } else {
       this.alarmMessage = "Your alarm is set for " + this.state.alarmTime + ".";
       if (this.state.currentTime === this.state.alarmTime) {
-        alert("its time!");
+        console.log("wakeup");
         // add the audio file
+        const audio1 = new Audio(audioUrl);
+        audio1.play();
       }
     }
   }
